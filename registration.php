@@ -28,8 +28,8 @@
         </div>
 
         <div>
-            <label for="confirm-password">Confirm Password : </label>
-            <input type="text" name="confirm-password" required>
+            <label for="confirm_password">Confirm Password : </label>
+            <input type="text" name="confirm_password" required>
         </div>
 
         <button type="submit" name="register" value="register">Submit</button>
