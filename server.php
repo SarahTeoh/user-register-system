@@ -45,7 +45,9 @@ if ($results) {
 /* If no errors */
 if (count($errors) == 0) {
     // Encrypt password
-    $encrypted_password = md5($password);
+    // md5() and sha1() are outdated because they always encrypt same password to same hash values, 
+    // which is dangerous
+    $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
     
     // Run query on db to register user
     $query = "INSERT INTO user (username, email, password) VALUES ($username, $email, $encrypted_password)";
