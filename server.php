@@ -76,6 +76,7 @@ if (isset($_POST['register'])){
 
 }else if(isset($_POST['login'])) {
     // Username and password input by the user
+    // NOTE: Do not use same variable name with variables in POST
     $loginusername = mysqli_real_escape_string($db, $_POST['username']);
     $loginpassword = mysqli_real_escape_string($db, $_POST['password']);
 
@@ -89,7 +90,7 @@ if (isset($_POST['register'])){
 
     // Query on db
     $search_user_query = "SELECT * FROM user WHERE username = '$loginusername'";
-    $user_data = mysqli_query($db, $search_user_query);
+    $user_data = mysqli_query($db, $search_user_query); // NOTE: query will always return TRUE as long as the query went OK (even if it returns empty) 
     $user_data_assoc = mysqli_fetch_assoc($user_data);
     
     /* If no errors */
