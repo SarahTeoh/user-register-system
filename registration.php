@@ -1,4 +1,5 @@
-<?php include server.php ?>
+<?php include('server.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,8 @@
         <h2>Register</h2>
     </div>
 
-    <form action="index.php" method="post">
+    <form method="post">
+        <?php include('errors.php'); ?>
         <div>
             <label for="username">Username : </label>
             <input type="text" name="username" required>

@@ -1,4 +1,4 @@
-<?php include server.php ?>
+<?php include('server.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,8 @@
         <h2>Log in</h2>
     </div>
 
-    <form action="login.php" method="post">
+    <form method="post">
+        <?php include('errors.php'); ?>
         <div>
             <label for="username">Username : </label>
             <input type="text" name="username" required>
@@ -29,6 +30,5 @@
         <p>Not a user? <a href="registration.php">Register here</a></p>
     </form>
 
-    
 </body>
 </html>
