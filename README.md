@@ -1,4 +1,4 @@
-# user-register-system
+# User authentication and login system
 A user authentication and login system using PHP, MySQL database. 
 # Reference tutorials and blogs
 ## About user registration system logic and algorithm
