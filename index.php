@@ -1,4 +1,5 @@
 <?php
+/* Only user who logged in can view this page */
 
 session_start();
 
@@ -43,7 +44,7 @@ if (isset($_GET['logout'])){
     
         <h1>Welcome, <strong><?php echo $_SESSION['username']; ?></strong>!</h1>
         
-        <!-- log out link 
+        <!-- log out using link 
             <a href="index.php?logout='1'">Log out</a> 
         --> 
 
