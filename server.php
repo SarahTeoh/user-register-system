@@ -99,7 +99,7 @@ if (isset($_POST['register'])){
         if (mysqli_num_rows($user_data) > 0){
             if (password_verify($loginpassword, $user_data_assoc['password'])){
                 $_SESSION['username'] = $loginusername;
-                $_SESSION['status'] = "Logged in successfully";
+                $_SESSION['success'] = "You are now logged in";
                 header('Location: index.php');
             }else{
                 // If password is wrong
